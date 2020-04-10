@@ -1,15 +1,14 @@
 import * as React from 'react'
-import {View,
-        StyleSheet,
+import {View, 
+        StyleSheet, 
         Text,
         TouchableOpacity,
         FlatList} from 'react-native'
-
-import {TimeTableComponent} from '../../component/TimeTableComponent'
 import {data, data2} from '../../data/data'
+import {TimeTableDriver} from '../../component/TimetableDriver'
 
 export const TimeTable = () => {
-    const [isPressed, setIsPressed] = React.useState('')
+  const [isPressed, setIsPressed] = React.useState('')
 
     const pressed = () => {
         return(
@@ -25,7 +24,7 @@ export const TimeTable = () => {
                 <FlatList
                     style={styles.flatlist}
                     data={data}
-                    renderItem={({ item }) => <TimeTableComponent data={item} />}
+                    renderItem={({ item }) => <TimeTableDriver data={item} />}
                     keyExtractor={item => item.id}
                   />
             </View>
@@ -54,7 +53,7 @@ export const TimeTable = () => {
                 <FlatList
                     style={styles.flatlist}
                     data={data2}
-                    renderItem={({ item }) => <TimeTableComponent  data={item} />}
+                    renderItem={({ item }) => <TimeTableDriver  data={item} />}
                     keyExtractor={item => item.id}
                 />
             </View>
@@ -64,8 +63,6 @@ export const TimeTable = () => {
     return(
         isPressed===''?pressed():nonpressed()
     )
-
-
 }
 
 const styles=StyleSheet.create({
@@ -107,5 +104,4 @@ const styles=StyleSheet.create({
     flex:1,
     width:'100%'
   }
-
 })
