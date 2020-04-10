@@ -48,6 +48,7 @@ export const TimeTableComponent = ({data}) => {
                         <Text>Отменить</Text>
                     </TouchableOpacity>
                     <Text>Check</Text>
+                    <Text>Semen</>
                 </View>
             </ScrollView>
     )
