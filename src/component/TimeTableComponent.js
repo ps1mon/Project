@@ -47,6 +47,7 @@ export const TimeTableComponent = ({data}) => {
                     <TouchableOpacity style={styles.touchCancel}>
                         <Text>Отменить</Text>
                     </TouchableOpacity>
+                    <Text>Check</Text>
                 </View>
             </ScrollView>
     )
